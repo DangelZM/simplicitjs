@@ -1,0 +1,19 @@
+{
+  "name": "simplicitjs",
+  "description": "Simple and explicit structure for app based on express.js",
+  "main": "index.js",
+  "authors": [
+    "Ivan Zmerzlyi <dangelzm@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/DangelZM/simplicitjs",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

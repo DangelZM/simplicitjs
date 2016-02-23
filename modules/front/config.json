@@ -1,0 +1,9 @@
+{
+  "type": "standard",
+  "views": true,
+  "theme": "default",
+  "controllers": {
+    "/": "index",
+    "/contacts": "contacts"
+  }
+}

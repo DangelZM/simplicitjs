@@ -1,0 +1,17 @@
+body {
+    background: #efefef;
+}
+
+.block {
+    width: 600px;
+    background: #fff;
+    border: 1px solid #000;
+    padding: 15px;
+}
+
+.block input,
+.block textarea,
+.block button {
+    width: 100%;
+    margin-bottom: 10px;
+}

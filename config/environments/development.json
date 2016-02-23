@@ -1,7 +1,8 @@
 {
   "appModules": {
-    "api":    { "mountpath": "/api" },
-    "front":    { "mountpath": "/" }
+    "api":    "/api",
+    "admin":    "/admin",
+    "front":  "/"
   },
   "db": {
     "url": "mongodb://localhost/dbname"

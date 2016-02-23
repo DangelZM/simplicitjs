@@ -9,8 +9,8 @@ nconf
     .env()
     .file({ file: path.join(__dirname, 'environments') + '/' + nconf.get('NODE_ENV') + '.json' });
 
-nconf.set('appDir', path.join(__dirname, '../app'));
-nconf.set('modelsDir', path.join(__dirname, '../app/models'));
-//nconf.set('bowerComponentsPath', path.join(__dirname, '../bower_components/'));
+nconf.set('CORE_DIR', path.join(__dirname, '../core'));
+nconf.set('MODELS_DIR', path.join(__dirname, '../models'));
+nconf.set('BOWER_DIR', path.join(__dirname, '../bower_components/'));
 
 module.exports = nconf;
