@@ -1,0 +1,10 @@
+{
+  "appModules": {
+    "api":    "/api",
+    "admin":    "/admin",
+    "front":  "/"
+  },
+  "db": {
+    "url": "mongodb://localhost/dbname"
+  }
+}

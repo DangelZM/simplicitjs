@@ -1,0 +1,33 @@
+{
+  "name": "simplicitjs",
+  "version": "1.0.0",
+  "description": "Simple and explicit structure for app based on express.js",
+  "main": "index.js",
+  "scripts": {
+    "start": "set DEBUG=app:server & nodemon ./bin/www"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DangelZM/simplicitjs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DangelZM/simplicitjs/issues"
+  },
+  "homepage": "https://github.com/DangelZM/simplicitjs#readme",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "cookie-parser": "^1.4.1",
+    "cors": "^2.7.1",
+    "debug": "^2.2.0",
+    "dotenv": "^2.0.0",
+    "express": "^4.13.4",
+    "hbs": "^4.0.0",
+    "mongoose": "^4.4.3",
+    "morgan": "^1.6.1",
+    "nconf": "^0.8.4",
+    "serve-favicon": "^2.3.0",
+    "winston": "^2.1.1"
+  }
+}

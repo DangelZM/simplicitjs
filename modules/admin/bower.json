@@ -1,0 +1,21 @@
+{
+  "name": "admin-module",
+  "main": "index.js",
+  "homepage": "https://github.com/DangelZM/simplicitjs",
+  "authors": [
+    "Ivan Zmerzlyi <dangelzm@gmail.com>"
+  ],
+  "description": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "page": "visionmedia/page.js#^1.6.4"
+  }
+}
