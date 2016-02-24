@@ -19,7 +19,7 @@ ModuleClass.prototype.init = function () {
     switch(config.type) {
         case 'api': runAPIModule(this, config); break;
         case 'spa': runSPAModule(this, config); break;
-        default :   runSandartModule(this, config); break;
+        default :   runStandardModule(this, config); break;
     }
 };
 
@@ -27,7 +27,7 @@ ModuleClass.prototype.getInstance = function () {
     return this.instance;
 };
 
-function runSandartModule(module, config) {
+function runStandardModule(module, config) {
     if(config.views) enableViews(module, config);
     if(config.controllers) {
         var controllers = config.controllers;

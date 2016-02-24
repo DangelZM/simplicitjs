@@ -6,6 +6,7 @@ var Controller = new ControllerClass();
 
 Controller.get('/', function(req, res){
     res.render('pages/contacts', {
+        activePage: "contacts",
         title: "Contacts page"
     });
 });

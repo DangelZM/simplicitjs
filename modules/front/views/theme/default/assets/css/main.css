@@ -1,5 +1,12 @@
 body {
     background: #efefef;
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
 }
 
 .block {
@@ -14,4 +21,38 @@ body {
 .block button {
     width: 100%;
     margin-bottom: 10px;
+}
+
+.container {
+    padding: 0 40px;
+}
+
+#header {
+    height: 50px;
+    line-height: 50px;
+    background: #369;
+    color: #fff;
+}
+
+#header ul {
+    display: block;
+}
+
+#header ul>li {
+    display: inline-block;
+}
+
+#header a {
+    color: #fff;
+    text-decoration: none;
+}
+
+[data-page="home"] #header .homeLink{
+    padding-bottom: 3px;
+    border-bottom: 1px solid #fff;
+}
+
+[data-page="contacts"] #header .contactsLink{
+    padding-bottom: 3px;
+    border-bottom: 1px solid #fff;
 }

@@ -1,0 +1,25 @@
+<dom-module id="posts-page">
+    <template>
+        <h1>Posts</h1>
+        <template is="dom-repeat" items="{{posts}}">
+            <div>
+                <div>[[item.title]]</div>
+                <div>[[item.desc]]</div>
+            </div>
+        </template>
+    </template>
+    <script>
+        Polymer({
+            is: 'posts-page',
+            ready: function () {
+                this.posts = [
+                    {title: "Post1", desc: "Post1 desc"},
+                    {title: "Post2", desc: "Post2 desc"},
+                    {title: "Post3", desc: "Post3 desc"},
+                    {title: "Post4", desc: "Post4 desc"},
+                    {title: "Post5", desc: "Post5 desc"}
+                ];
+            }
+        });
+    </script>
+</dom-module>

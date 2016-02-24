@@ -4,10 +4,9 @@ var ControllerClass = require(path.join(config.get('CORE_DIR'), 'Controller'));
 
 var Controller = new ControllerClass();
 
-Controller.get('/', function(req, res){
-    res.render('pages/home', {
-        activePage: "home",
-        title: "Home page"
+Controller.post('/authorize', function(req, res){
+    res.send({
+        token: "testtoken"
     });
 });
 

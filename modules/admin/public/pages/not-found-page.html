@@ -1,0 +1,24 @@
+<dom-module id="not-found-page">
+    <style>
+        :host{
+
+        }
+    </style>
+    <template>
+        <h1>Not found page</h1>
+        <div>
+            Page [[pathname]] not found!!!
+        </div>
+    </template>
+    <script>
+        Polymer({
+            is: 'not-found-page',
+            properties: {
+                pathname: String
+            },
+            ready: function () {
+                this.pathname = app.params.pathname;
+            }
+        });
+    </script>
+</dom-module>

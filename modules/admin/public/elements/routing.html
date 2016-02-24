@@ -1,0 +1,25 @@
+<script src="../bower_components/page/page.js"></script>
+<script>
+  window.addEventListener('WebComponentsReady', function() {
+    page.base('/admin/');
+
+    page('/', function () {
+      app.route = 'dashboard';
+    });
+
+    page('posts', function () {
+      app.route = 'posts';
+    });
+
+    page('*', function (params) {
+      app.params = params;
+      app.route = 'not-found';
+    });
+
+    // add #! before urls
+    page({
+      hashbang: false
+    });
+
+  });
+</script>

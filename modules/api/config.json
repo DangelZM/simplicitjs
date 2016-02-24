@@ -1,6 +1,7 @@
 {
   "type": "api",
   "controllers": {
-    "/": "index"
+    "/": "index",
+    "/auth": "auth"
   }
 }

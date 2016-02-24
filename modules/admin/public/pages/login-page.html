@@ -1,0 +1,63 @@
+<dom-module id="login-page">
+    <style>
+        :host{
+            @apply(--layout-fit);
+            @apply(--layout-vertical);
+            @apply(--layout-center);
+            @apply(--layout-center-justified);
+            background: #DFDFDF;
+        }
+        #form-card {
+            max-width: 600px;
+            width: 90%;
+        }
+        .error {
+            color: #970000;
+        }
+    </style>
+    <template>
+        <paper-card id="form-card" heading="Login">
+            <div class="card-content">
+                <form is="iron-form" id="form" method="post" action="/api/auth/authorize">
+                    <paper-input type="email" name="email" label="Email"></paper-input>
+                    <paper-input type="password" name="password" label="Password"></paper-input>
+                </form>
+            </div>
+            <temlate is="dom-if" if="[[error]]">
+                <div class="card-content">
+                    <div class="error">[[error]]</div>
+                </div>
+            </temlate>
+            <div class="card-actions">
+                <paper-button on-tap="submitForm">Go</paper-button>
+            </div>
+        </paper-card>
+    </template>
+    <script>
+        Polymer({
+            is: 'login-page',
+            properties: {
+              error: String
+            },
+            ready: function() {
+                var self = this;
+                var form = this.$.form;
+                form.addEventListener('iron-form-response', function (e) {
+                    self.error = '';
+                    localStorage.setItem('access_token', e.detail.response.token);
+                    app.authenticated = true;
+                    app.route = 'dashboard';
+                });
+                form.addEventListener('iron-form-error', function (e) {
+                    console.log(e.detail.request.status);
+                    if(e.detail.request.status === 401){
+                        self.error = 'Input not correct.'
+                    }
+                })
+            },
+            submitForm: function(){
+                this.$.form.submit();
+            }
+        });
+    </script>
+</dom-module>
